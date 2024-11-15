@@ -1,0 +1,47 @@
+{
+    "name": "python-project-template",
+    "type": "app",
+    "version": "0.1.0",
+    "description": "Python project template with modern tooling",
+    "author": "Your Name",
+    "files": [
+      "src/__init__.py",
+      "src/main.py",
+      "src/lib.py",
+      "tests/__init__.py",
+      "tests/test_main.py",
+      "pyproject.toml",
+      "README.md",
+      ".gitignore",
+      ".pre-commit-config.yaml",
+      "Dockerfile",
+      "requirements.txt",
+      "requirements-dev.txt"
+    ],
+    "dependencies": [
+      {
+        "name": "pytest",
+        "version": "^7.4.0"
+      },
+      {
+        "name": "black",
+        "version": "^23.0.0"
+      },
+      {
+        "name": "ruff",
+        "version": "^0.1.0"
+      },
+      {
+        "name": "mypy",
+        "version": "^1.5.0"
+      }
+    ],
+    "scripts": {
+      "start": "python -m src.main",
+      "test": "pytest",
+      "lint": "ruff check .",
+      "format": "black .",
+      "typecheck": "mypy src tests",
+      "dev-setup": "pip install -r requirements-dev.txt"
+    }
+  }

@@ -1,0 +1,41 @@
+{
+    "name": "ts-bun-project-template",
+    "type": "app",
+    "version": "0.1.0",
+    "description": "TypeScript project template with Bun",
+    "author": "Al",
+    "files": [
+      "src/index.ts",
+      "src/lib.ts",
+      "tests/index.test.ts",
+      "package.json",
+      "tsconfig.json",
+      "bunfig.toml",
+      "README.md",
+      ".gitignore",
+      ".eslintrc.json",
+      ".github/workflows/ci.yml"
+    ],
+    "dependencies": [
+      {
+        "name": "bun-types",
+        "version": "latest"
+      },
+      {
+        "name": "typescript",
+        "version": "^5.0.0"
+      },
+      {
+        "name": "@types/node",
+        "version": "^20.0.0"
+      }
+    ],
+    "scripts": {
+      "dev": "bun --watch run src/index.ts",
+      "start": "bun run src/index.ts",
+      "build": "bun build ./src/index.ts --outdir ./dist",
+      "test": "bun test",
+      "lint": "eslint src/**/*.ts",
+      "format": "prettier --write src/**/*.ts"
+    }
+  }

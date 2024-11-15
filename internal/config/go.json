@@ -1,0 +1,33 @@
+{
+  "name": "go-project-template",
+  "type": "app",
+  "version": "0.1.0",
+  "description": "Go project template",
+  "author": "Al",
+  "files": [
+    "main.go",
+    "go.mod",
+    "README.md",
+    ".gitignore",
+    "internal/config/config.go",
+    "cmd/root.go",
+    "pkg/utils/utils.go",
+    "test/main_test.go"
+  ],
+  "dependencies": [
+    {
+      "name": "github.com/spf13/cobra",
+      "version": "v1.8.0"
+    },
+    {
+      "name": "github.com/spf13/viper",
+      "version": "v1.18.0"
+    }
+  ],
+  "scripts": {
+    "build": "go build -o bin/app cmd/main.go",
+    "test": "go test ./...",
+    "run": "go run cmd/main.go",
+    "lint": "golangci-lint run"
+  }
+}

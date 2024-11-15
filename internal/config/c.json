@@ -1,0 +1,32 @@
+{
+    "name": "c-project-template",
+    "type": "app",
+    "version": "0.1.0",
+    "description": "C project template with CMake",
+    "author": "Al",
+    "files": [
+      "src/main.c",
+      "include/lib.h",
+      "include/impl/lib.c",
+      "CMakeLists.txt",
+      "README.md",
+      ".gitignore",
+      "tests/test_main.c",
+      "tests/CMakeLists.txt",
+      "cmake/CompilerOptions.cmake",
+      "scripts/build.sh",
+      "scripts/test.sh"
+    ],
+    "dependencies": [
+      {
+        "name": "unity",
+        "version": "2.5.2"
+      }
+    ],
+    "scripts": {
+      "build": "cmake -B build && cmake --build build",
+      "test": "cd build && ctest --output-on-failure",
+      "clean": "rm -rf build",
+      "format": "clang-format -i src/*.c include/*.h"
+    }
+  }

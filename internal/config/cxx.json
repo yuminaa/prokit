@@ -1,0 +1,43 @@
+{
+  "name": "cpp-project-template",
+  "type": "app",
+  "version": "0.1.0",
+  "description": "C++ project template with CMake",
+  "author": "Al",
+  "files": [
+    "src/main.cpp",
+    "include/lib.hpp",
+    "include/impl/lib.cpp",
+    "CMakeLists.txt",
+    "README.md",
+    ".gitignore",
+    "tests/test_main.cpp",
+    "tests/CMakeLists.txt",
+    "cmake/CompilerOptions.cmake",
+    "cmake/Dependencies.cmake",
+    "conanfile.txt",
+    "scripts/build.sh",
+    "scripts/test.sh"
+  ],
+  "dependencies": [
+    {
+      "name": "fmt",
+      "version": "10.1.1"
+    },
+    {
+      "name": "catch2",
+      "version": "3.4.0"
+    },
+    {
+      "name": "spdlog",
+      "version": "1.12.0"
+    }
+  ],
+  "scripts": {
+    "build": "cmake -B build -DCMAKE_BUILD_TYPE=Release && cmake --build build",
+    "test": "cd build && ctest --output-on-failure",
+    "clean": "rm -rf build",
+    "format": "clang-format -i src/*.cpp include/*.hpp",
+    "conan": "conan install . --output-folder=build --build=missing"
+  }
+}
