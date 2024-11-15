@@ -1,6 +1,6 @@
-# Project Setup CLI
+# prokit
 
-Just a CLI tool to help me setup my project
+Just a CLI tool to help me setup my projects
 
 ## Features
 
